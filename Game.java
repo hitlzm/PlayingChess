@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.Scanner;
 
-//Game类，基类
 public class Game
 {
 	public String name;
@@ -39,6 +38,7 @@ public class Game
 				else
 					System.out.printf(board.game_board[i][j].color + "%-2s\033[0m\033[42;37m%s\033[0m", board.game_board[i][j].name, "|");
 			}
+
 			System.out.println();
 			if(i != size-1) System.out.printf("\033[0m\033[42;37m%s\033[0m", "|");
 			for(int k = 0; i != size-1 && k < size; k++)
