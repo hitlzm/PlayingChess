@@ -81,7 +81,6 @@ public class Action
 				
 			}
 			
-	
 		}
 		System.out.printf("move fail:位置(%d, %d)没有棋子\n", src.x, src.y);
 		return 0;

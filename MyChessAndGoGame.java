@@ -1,20 +1,24 @@
 import java.io.*;
 import java.util.Scanner;
 
-public class MyChessAndGoGame{
+public class MyChessAndGoGame
+{
 	public static void main(String []args)
 	{
 		Game G=null;
 		Scanner sc = new Scanner(System.in);
 		int inputtypeover = 0;
-		while(inputtypeover == 0){
+		while(inputtypeover == 0)
+		{
 			System.out.println("Choose chess or go?");
 			String type = sc.next();   //type indicates chess or go
-			if(type.equals("chess")){
+			if(type.equals("chess"))
+			{
 				inputtypeover = 1;
 				G = new Chess("chess");		//初始化棋盘为chess
 			}
-			else if (type.equals("go")){
+			else if (type.equals("go"))
+			{
 				inputtypeover = 1;
 				G = new Go("go");		//初始化棋盘为go
 			}
