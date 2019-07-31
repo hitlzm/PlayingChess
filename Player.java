@@ -1,18 +1,22 @@
 import java.io.*;
 import java.util.Scanner;
 
-public class Player{
+public class Player
+{
 	public String name;
 	public int total = 0;
 	public int id;
 	public String history = "";
-	public Player(String inputname, int inputsize, int inputid){
+	public Player(String inputname, int inputsize, int inputid)
+	{
 		name = inputname;
 		if(inputsize == 8) total = 16;
 		if(inputsize == 18) total = 0;
 		id = inputid;
 	}
-	public int action(Game G){
+	
+	public int action(Game G)
+	{
 		int actionid;
 		Action todo = new Action(id);
 		System.out.println("\033[2;3m\n清选择你要进行的操作：\n1.put(for go)\n2.move\n3.take\n4.eat\n5.select(不占用本轮走棋机会)\n6.计算双方总棋子数(不占用本轮走棋机会)\n7.end\n8.bypass\033[0m");
@@ -20,7 +24,8 @@ public class Player{
 		actionid = sc.nextInt();
 		int x, y, x1, y1, x2, y2, flag =0;
 		Position srcp, destp, p;
-		switch(actionid){
+		switch(actionid)
+		{
 			case 1:
 				System.out.println("请输入放置位置x,y(用空格间隔):");
 				x = sc.nextInt();
